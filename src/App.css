@@ -153,38 +153,63 @@ nav {
 }
 
 nav a {
-  color: var(--link-color);
+  color: var(--grey-100);
   text-decoration: none;
   display: flex;
-  align-items: center; 
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
-
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  
   &.active {
-    color: var(--link-hover-color);
-    background-color: var(--nav-background-color);
     font-weight: 600;
-
     
-     @media (width >= 1400px) {
+    @media (width <= 1400px) {
+      color: var(--grey-10);
+      background-color: var(--primary-100);
+      border-radius: 50%;
+      margin: 0 1rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (width >= 1400px) {
+      color: var(--primary-100);
       border: transparent 0.3rem solid;
       border-left: var(--button-primary-border-color) 0.25rem solid;
       padding-left: 0.75rem;
-     }
+    }
+  }
+}
+
+nav a i {
+  font-size: 1.5rem;
+  
+  @media (width <= 1400px) {
+    margin: 0;
   }
 
-  &:hover {
-    color: var(--link-hover-color);
+  @media (width >= 1400px) {
+    margin-right: 1rem;
+    margin-left: 2rem;
+  }
+}
+
+.ventixe-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.ventixe-logo-container {
+  @media (width <= 1400px) {
+    margin-left: .5rem;
+    margin-bottom: 1rem;
   }
 
-  i {
-    font-size: 1.5em;
-    margin-right: 0.5rem; 
-  }
-
-  span {
-    font-size: 1rem; 
-  }
+   @media (width >= 1400px) {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+   }
 }
 
 .ventixe-logo-link {

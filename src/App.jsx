@@ -8,8 +8,6 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/home" element={<Dashboard />} />
-        {/* Redirect from / to /home */}
         <Route path="/" element={<Dashboard />} />
         <Route path="/events" element={<EventPage />} />
         <Route path="/events/:id" element={<EventDetailsPage />} />
