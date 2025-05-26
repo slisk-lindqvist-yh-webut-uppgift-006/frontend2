@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav>
       <NavLink to="/dashboard" className="ventixe-logo-link">
-        <img src="/src/assets/images/ventixe.svg" alt="Ventixe logo" className="ventixe-logo" />
+        <img src="/ventixe.svg" alt="Ventixe logo" className="ventixe-logo" />
         <p className='strangle'>Ventixe</p>
       </NavLink>
       <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
