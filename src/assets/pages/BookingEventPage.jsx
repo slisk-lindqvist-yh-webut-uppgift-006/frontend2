@@ -35,7 +35,7 @@ const BookingEventPage = () => {
 
     const postBooking = async () => {
         try {
-        const res = await fetch(`https://ventixe-assignment-slisk-bookingservice-hffwabf5hvc7dah7.swedencentral-01.azurewebsites.net/api/Bookings`, {
+        const res = await fetch(`https://ventixe-assignment-slisk-bookingservice-ddcjbkfbe7hwhecn.swedencentral-01.azurewebsites.net/index.html`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(formData),
@@ -203,7 +203,7 @@ const BookingEventPage = () => {
                                         ticketQuantity: prev.ticketQuantity + 1,
                                     }))
                                 }
-                                
+
                                 // CHANGE: Disable button if quantity reaches 100
                                 disabled={formData.ticketQuantity === 100}
                             >
