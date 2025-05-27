@@ -18,6 +18,7 @@ const BookingEventPage = () => {
         postalCode: '',
         city: '',
         country: '',
+        ticketQuantity: 1,
     });
 
     const getEvent = async () => {
@@ -172,6 +173,43 @@ const BookingEventPage = () => {
                                 </option>
                             ))}
                         </select>
+                    </div>
+
+                    <div className="form-group ticket-quantity">
+                        <label htmlFor="ticketQuantity">Ticket Quantity</label>
+                        <div className="quantity-controls">
+                            <button
+                                type="button"
+                                className="btn"
+                                onClick={() =>
+                                    setFormData(prev => ({
+                                        ...prev,
+                                        ticketQuantity: Math.max(1, prev.ticketQuantity - 1),
+                                    }))
+                                }
+                                
+                                // CHANGE: Disable button if quantity is 1
+                                disabled={formData.ticketQuantity === 1}
+                            >
+                                –
+                            </button>
+                            <span className="quantity-value">{formData.ticketQuantity}</span>
+                            <button
+                                type="button"
+                                className="btn"
+                                onClick={() =>
+                                    setFormData(prev => ({
+                                        ...prev,
+                                        ticketQuantity: prev.ticketQuantity + 1,
+                                    }))
+                                }
+                                
+                                // CHANGE: Disable button if quantity reaches 100
+                                disabled={formData.ticketQuantity === 100}
+                            >
+                                +
+                            </button>
+                        </div>
                     </div>
 
                     <button type="submit" className="btn">
