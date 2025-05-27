@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -33,6 +33,9 @@ const EventDetailsPage = () => {
                 <div className='event-details'>
                     <div className='event-image'>
                         <img src={event.image} alt={event.title} />
+                        <div className='position-right position-bottom'>
+                            <Link to={`/events/booking/${id}`} className='btn'>Book Event</Link>
+                        </div>
                     </div>
                     <div className='event-info'>
                         <h1>{event.title}</h1>
@@ -47,16 +50,18 @@ const EventDetailsPage = () => {
                                     <p>{event.location}</p>
                                 </div>
                             </div>
-                            <div>
-                                <div className='event-info-tickets'>
-                                    <p>Tickets Sold</p>
-                                    <p><span>21,000</span>/30,000</p>
+                            <div className='event-info-numbers'>
+                                <div>
+                                    <div className='event-info-tickets'>
+                                        <p>Tickets Sold</p>
+                                        <p><span>21,000</span>/30,000</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className='event-info-price'>
-                                    <p>Starts from</p>
-                                    <span className='event-price'>$60</span>
+                                <div>
+                                    <div className='event-info-price'>
+                                        <p>Starts from</p>
+                                        <span className='event-price'>$60</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -65,6 +70,7 @@ const EventDetailsPage = () => {
                             <p>About Event</p>
                             <span>{event.description}</span>
                         </div>
+                        
                     </div>
                 </div>
             </main>

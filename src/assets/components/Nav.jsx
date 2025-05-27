@@ -12,6 +12,11 @@ const Nav = () => {
         <span className='strangle'>Dashboard</span>
       </NavLink>
       
+      <NavLink to="/bookings" className={({ isActive }) => (isActive ? 'active' : '')}>
+        <i className="bi bi-check-square"></i>
+        <span className='strangle'>Bookings</span>
+      </NavLink>
+
       <NavLink to="/events" className={({ isActive }) => (isActive ? 'active' : '')}>
         <i className="bi bi-ticket-perforated"></i>
         <span className='strangle'>Events</span>
