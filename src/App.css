@@ -109,24 +109,281 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .h1 {
-  font-size: 2rem;
+  font-size: 2em; /* 32px / 16px = 2em */
 }
 h2, .h2 {
-  font-size: 1.75rem;
+  font-size: 1.75em; /* 28px / 16px = 1.75em */
 }
 h3, .h3 {
-  font-size: 1.5rem;
+  font-size: 1.625em; /* 26px / 16px = 1.625em */
 }
 h4, .h4 {
-  font-size: 1.25rem;
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
 }
 h5, .h5 {
-  font-size: 1rem;
+  font-size: 1.375em; /* 22px / 16px = 1.375em */
 }
 h6, .h6 {
-  font-size: 0.875rem;
+  font-size: 1.25em; /* 20px / 16px = 1.25em */
 }
 
+/* Heading Styles */
+.h1-32px-semibold {
+  font-size: 2em; /* 32px / 16px = 2em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h1-32px-bold {
+  font-size: 2em; /* 32px / 16px = 2em */
+  font-weight: 700; /* Bold */
+}
+
+.h2-28px-semibold {
+  font-size: 1.75em; /* 28px / 16px = 1.75em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h2-26px-semibold {
+  font-size: 1.625em; /* 26px / 16px = 1.625em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h2-28px-bold {
+  font-size: 1.75em; /* 28px / 16px = 1.75em */
+  font-weight: 700; /* Bold */
+}
+
+.h3-26px-semibold {
+  font-size: 1.625em; /* 26px / 16px = 1.625em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h3-26px-bold {
+  font-size: 1.625em; /* 26px / 16px = 1.625em */
+  font-weight: 700; /* Bold */
+}
+
+.h4-24px-semibold {
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h4-24px-bold {
+  font-size: 1.5em; /* 24px / 16px = 1.5em */
+  font-weight: 700; /* Bold */
+}
+
+.h5-22px-semibold {
+  font-size: 1.375em; /* 22px / 16px = 1.375em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h5-22px-bold {
+  font-size: 1.375em; /* 22px / 16px = 1.375em */
+  font-weight: 700; /* Bold */
+}
+
+.h6-20px-semibold {
+  font-size: 1.25em; /* 20px / 16px = 1.25em */
+  font-weight: 600; /* SemiBold */
+}
+
+.h6-20px-bold {
+  font-size: 1.25em; /* 20px / 16px = 1.25em */
+  font-weight: 700; /* Bold */
+}
+
+/* Title Styles */
+.title-18px-medium {
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  font-weight: 500; /* Medium */
+}
+
+.title-18px-semibold {
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  font-weight: 600; /* SemiBold */
+}
+
+.title-18px-bold {
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  font-weight: 700; /* Bold */
+}
+
+.title-16px-regular {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 400; /* Regular */
+}
+
+.title-16px-medium {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 500; /* Medium */
+}
+
+.title-16px-semibold {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 600; /* SemiBold */
+}
+
+.title-16px-bold {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 700; /* Bold */
+}
+
+.title-14px-regular {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 400; /* Regular */
+}
+
+.title-14px-medium {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 500; /* Medium */
+}
+
+.title-14px-semibold {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 600; /* SemiBold */
+}
+
+.title-14px-bold {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 700; /* Bold */
+}
+
+.title-12px-regular {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 400; /* Regular */
+}
+
+.title-12px-medium {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 500; /* Medium */
+}
+
+.title-12px-semibold {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 600; /* SemiBold */
+}
+
+.title-12px-bold {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 700; /* Bold */
+}
+
+.title-10px-regular {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 400; /* Regular */
+}
+
+.title-10px-semibold {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 600; /* SemiBold */
+}
+
+.title-10px-bold {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 700; /* Bold */
+}
+
+/* Body Styles */
+.body-16px-regular {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 400; /* Regular */
+}
+
+.body-16px-medium {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 500; /* Medium */
+}
+
+.body-16px-semibold {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 600; /* SemiBold */
+}
+
+.body-16px-bold {
+  font-size: 1em; /* 16px / 16px = 1em */
+  font-weight: 700; /* Bold */
+}
+
+.body-14px-regular {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 400; /* Regular */
+}
+
+.body-14px-medium {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 500; /* Medium */
+}
+
+.body-14px-semibold {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 600; /* SemiBold */
+}
+
+.body-14px-bold {
+  font-size: 0.875em; /* 14px / 16px = 0.875em */
+  font-weight: 700; /* Bold */
+}
+
+.body-12px-regular {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 400; /* Regular */
+}
+
+.body-12px-medium {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 500; /* Medium */
+}
+
+.body-12px-semibold {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 600; /* SemiBold */
+}
+
+.body-12px-bold {
+  font-size: 0.75em; /* 12px / 16px = 0.75em */
+  font-weight: 700; /* Bold */
+}
+
+.body-11px-regular {
+  font-size: 0.6875em; /* 11px / 16px = 0.6875em */
+  font-weight: 400; /* Regular */
+}
+
+.body-11px-medium {
+  font-size: 0.6875em; /* 11px / 16px = 0.6875em */
+  font-weight: 500; /* Medium */
+}
+
+.body-11px-semibold {
+  font-size: 0.6875em; /* 11px / 16px = 0.6875em */
+  font-weight: 600; /* SemiBold */
+}
+
+.body-11px-bold {
+  font-size: 0.6875em; /* 11px / 16px = 0.6875em */
+  font-weight: 700; /* Bold */
+}
+
+.body-10px-regular {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 400; /* Regular */
+}
+
+.body-10px-medium {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 500; /* Medium */
+}
+
+.body-10px-semibold {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 600; /* SemiBold */
+}
+
+.body-10px-bold {
+  font-size: 0.625em; /* 10px / 16px = 0.625em */
+  font-weight: 700; /* Bold */
+}
 
 .center-wrapper {
   display: flex;
