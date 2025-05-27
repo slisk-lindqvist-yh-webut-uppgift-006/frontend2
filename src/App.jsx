@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Dashboard from './assets/pages/Dashboard';
 import EventPage from './assets/pages/EventPage';
 import EventDetailsPage from './assets/pages/EventDetailsPage';
-import Dashboard from './assets/pages/Dashboard';
-import BookingEvent from './assets/pages/BookingEvent';
+import BookingEventPage from './assets/pages/BookingEventPage';
 import Bookings from './assets/pages/Bookings';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/events" element={<EventPage />} />
         <Route path="/events/:id" element={<EventDetailsPage />} />
-        <Route path="/events/booking/:id" element={<BookingEvent />} />
+        <Route path="/events/booking/:id" element={<BookingEventPage />} />
         <Route path="/bookings" element={<Bookings />} />
       </Routes>
     </>

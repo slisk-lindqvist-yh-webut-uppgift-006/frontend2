@@ -546,6 +546,74 @@ header {
   padding: 1.5rem;
 }
 
+.header {
+  background-color: var(--header-background-color); /* Uses --grey-20 (#F7F7F7) */
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.header-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.back-arrow {
+  font-size: 1.2em;
+  color: var(--text-muted-color); /* Uses --grey-60 (#9F9FA1) */
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+.back-arrow:hover {
+  color: var(--text-color); /* Uses --grey-100 (#1E1E20) */
+}
+
+.breadcrumb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5em;
+}
+
+.breadcrumb-list li {
+  color: var(--text-color); /* Uses --grey-100 (#1E1E20) */
+  font-size: 0.9em;
+}
+
+.breadcrumb-list a {
+  color: var(--text-muted-color); /* Uses --grey-60 (#9F9FA1) */
+  text-decoration: none;
+}
+
+.breadcrumb-list a:hover {
+  color: var(--text-color); /* Uses --grey-100 (#1E1E20) */
+  text-decoration: underline;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: " / ";
+  color: var(--text-muted-color); /* Uses --grey-60 (#9F9FA1) */
+}
+
+.breadcrumb-list li:last-child span {
+  color: var(--text-color); /* Uses --grey-100 (#1E1E20) */
+  font-weight: 600;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5em; /* Adjust based on your typography system */
+  font-weight: 600;
+  color: var(--headline-color); /* Uses --secondary-100 (#37437D) */
+}
+
 main {
   grid-area: main;
   background-color: var(--main-background-color);
@@ -660,7 +728,13 @@ footer {
   text-align: center;
   font-weight: 500;
   cursor: pointer;
+  border: none;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary-90);
+  }
 }
 
 .position-right {
@@ -779,4 +853,61 @@ footer {
     background-color: var(--separator-border-color); 
     margin: 20px 0; 
     width: 100%;
+}
+
+.event-bookings-wrapper { 
+  
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    max-width: 500px;
+
+    input {
+      padding: 0.5rem;
+      border: 1px solid var(--input-border-color);
+      border-radius: 0.5rem;
+      background-color: var(--input-background-color);
+      color: var(--input-text-color);
+      font-size: 1rem;
+    }
+
+    input:focus {
+      border-color: var(--input-border-focus-color);
+      outline: none;
+    }
+    input::placeholder {
+      color: var(--input-placeholder-color);
+    }
+
+    select {
+      padding: 0.5rem;
+      border: 1px solid var(--input-border-color);
+      border-radius: 0.5rem;
+      background-color: var(--input-background-color);
+      color: var(--input-text-color);
+      font-size: 1rem;
+    }
+    select:focus {
+      border-color: var(--input-border-focus-color);
+      outline: none;
+    }
+    select::placeholder {
+      color: var(--input-placeholder-color);
+    }
+    
+
+    button {
+      padding: .7rem 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
