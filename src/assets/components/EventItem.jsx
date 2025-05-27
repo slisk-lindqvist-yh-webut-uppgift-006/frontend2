@@ -5,9 +5,8 @@ const EventItem = ({item}) => {
   return (
     <Link to={`/events/${item.id}`} className="event-item">
       <div className='event-card'>
-        <div>{item.id}</div>
-        <div>{item.image}</div>
-        <div>{item.title}</div><br />
+        <img src={item.image} alt={item.title} />
+        <h1>{item.title}</h1><br />
         <div>{item.location}</div>
         <div>{item.eventDate}</div><br />
         <div>{item.description}</div>
