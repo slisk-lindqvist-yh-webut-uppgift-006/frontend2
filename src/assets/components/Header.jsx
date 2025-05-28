@@ -1,9 +1,101 @@
 import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Map the current path to a readable header title
+  const getHeaderTitle = () => {
+    switch (location?.pathname) {
+      case '/dashboard':
+        return 'Dashboard';
+      case '/bookings':
+        return 'Bookings';
+      case '/events':
+        return 'Events';
+      default:
+        if (location?.pathname.startsWith('/events/booking/')) {
+          return 'Book Event';
+        } else if (location?.pathname.startsWith('/events/')) {
+          return 'Event Details';
+        }
+        return 'Dashboard';
+    }
+  };
+
+  // Determine the breadcrumb segments based on the current path
+  const getBreadcrumb = () => {
+    const pathSegments = location.pathname.split('/').filter(segment => segment);
+    const breadcrumbSegments = [];
+
+    // Always start with "Dashboard"
+    breadcrumbSegments.push({ text: 'Dashboard', path: '/dashboard' });
+
+    if (pathSegments.length >= 1 && pathSegments[0] === 'events') {
+      // Add "Events" for /events and its subpages
+      breadcrumbSegments.push({ text: 'Events', path: '/events' });
+
+      if (pathSegments.length === 2) {
+        // Event Details page: /events/:id
+        breadcrumbSegments.push({ text: 'Event Details', path: location.pathname });
+      }
+      if (pathSegments.length === 3 && pathSegments[1] === 'booking') {
+        // Book Event page: /events/booking/:id
+        breadcrumbSegments.push({ text: 'Book Event', path: location.pathname });
+      }
+    }
+
+    return breadcrumbSegments;
+  };
+
+  // Determine if the back arrow should be shown (for deeper categories)
+  const showBackArrow = () => {
+    const pathSegments = location.pathname.split('/').filter(segment => segment);
+    return pathSegments.length > 1; // Show arrow for paths deeper than main pages (e.g., /events/:id or /events/booking/:id)
+  };
+
+  const breadcrumbSegments = getBreadcrumb();
+  const shouldShowBackArrow = showBackArrow();
+
   return (
     <header className="header">
-      <h1 className="header-title">Somewhere Header</h1>
+      {breadcrumbSegments.length > 0 && (
+        <div className="breadcrumb">
+          {breadcrumbSegments.map((segment, index) => {
+            const isLast = index === breadcrumbSegments.length - 1;
+            return (
+              <span key={segment.path}>
+                {isLast ? (
+                  <span className="breadcrumb-current">{segment.text}</span>
+                ) : (
+                  <a
+                    href={segment.path}
+                    onClick={(e) => { e.preventDefault(); navigate(segment.path); }}
+                    className="breadcrumb-link"
+                  >
+                    {segment.text}
+                  </a>
+                )}
+                {index < breadcrumbSegments.length - 1 && ' / '}
+              </span>
+            );
+          })}
+        </div>
+      )}
+      <div className="header-title-container">
+        {shouldShowBackArrow && (
+          <button
+            onClick={() => navigate(-1)}
+            className="back-button"
+          >
+            ←
+          </button>
+        )}
+        <h1 className="header-title">
+          {getHeaderTitle()}
+        </h1>
+      </div>
     </header>
   );
 };
