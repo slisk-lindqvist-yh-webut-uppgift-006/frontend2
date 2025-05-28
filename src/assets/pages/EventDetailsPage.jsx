@@ -44,6 +44,7 @@ const EventDetailsPage = () => {
                                 <div className='event-info-date'>
                                     <i class="bi bi-calendar4-event"></i>
                                     <p>{new Date(event.eventDate).toLocaleDateString()}</p>
+                                    <p>{new Date(event.eventDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} PM</p>
                                 </div>
                                 <div className='event-info-location'>
                                     <i class="bi bi-geo-alt"></i>
