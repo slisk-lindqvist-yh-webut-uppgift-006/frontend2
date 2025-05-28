@@ -30,7 +30,7 @@ const Header = () => {
     const breadcrumbSegments = [];
 
     // Always start with "Dashboard"
-    breadcrumbSegments.push({ text: 'Dashboard', path: '/dashboard' });
+    breadcrumbSegments.push({ text: 'Dashboard', path: '/' });
 
     if (pathSegments.length >= 1 && pathSegments[0] === 'events') {
       // Add "Events" for /events and its subpages
