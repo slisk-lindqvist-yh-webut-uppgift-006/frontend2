@@ -34,19 +34,24 @@ const Header = () => {
     const breadcrumbSegments = [];
 
     // Always start with "Dashboard"
-    breadcrumbSegments.push({ text: 'Dashboard', path: '/' });
+    breadcrumbSegments.push({ text: 'Dashboard', path: '/dashboard' });
 
-    if (pathSegments.length >= 1 && pathSegments[0] === 'events') {
-      // Add "Events" for /events and its subpages
-      breadcrumbSegments.push({ text: 'Events', path: '/events' });
+    if (pathSegments.length >= 1) {
+      if (pathSegments[0] === 'bookings') {
+        // Add "Bookings" for /bookings
+        breadcrumbSegments.push({ text: 'Bookings', path: '/bookings' });
+      } else if (pathSegments[0] === 'events') {
+        // Add "Events" for /events and its subpages
+        breadcrumbSegments.push({ text: 'Events', path: '/events' });
 
-      if (pathSegments.length === 2) {
-        // Event Details page: /events/:id
-        breadcrumbSegments.push({ text: 'Event Details', path: location.pathname });
-      }
-      if (pathSegments.length === 3 && pathSegments[1] === 'booking') {
-        // Book Event page: /events/booking/:id
-        breadcrumbSegments.push({ text: 'Book Event', path: location.pathname });
+        if (pathSegments.length === 2) {
+          // Event Details page: /events/:id
+          breadcrumbSegments.push({ text: 'Event Details', path: location.pathname });
+        }
+        if (pathSegments.length === 3 && pathSegments[1] === 'booking') {
+          // Book Event page: /events/booking/:id
+          breadcrumbSegments.push({ text: 'Book Event', path: location.pathname });
+        }
       }
     }
 
