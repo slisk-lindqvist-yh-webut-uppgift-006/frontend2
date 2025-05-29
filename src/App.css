@@ -670,7 +670,6 @@ footer {
   border: 1px solid var(--card-border-color);
   border-radius: 0.5rem;
   padding: 1rem;
-  /* margin-bottom: 1rem; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
@@ -678,48 +677,73 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+}
 
-  .event-card-image {
+.event-item {
+  text-decoration: none;
+}
+
+.event-card-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 0.5rem;
+  background-color: var(--grey-40);
+  position: relative;
+  overflow: hidden;
+
+  img {
     width: 100%;
-    height: 300px;
+    height: 100%;
+    object-fit: cover;
     border-radius: 0.5rem;
-    background-color: var(--grey-40);
-    position: relative;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 0.5rem;
-    }
   }
+}
 
-  .event-card-date {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-muted-color);
-    font-size: 0.875rem;
-    text-decoration: none;
+.event-card-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted-color);
+  font-size: 0.875rem;
+  margin-bottom: -1rem;
 
-
-    i {
-      color: var(--grey-50);
-    }
+  i {
+    color: var(--grey-50);
   }
+}
 
-  .event-card-location {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-muted-color);
-    font-size: 0.875rem;
+.event-card-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted-color);
+  font-size: 0.875rem;
+  margin-top: -1rem;
 
-    i {
-      color: var(--grey-50);
-    }
+  i {
+    color: var(--grey-50);
   }
+}
+
+.event-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--grey-100);
+  margin-bottom: 0.5rem;
+}
+
+.event-card-price {
+  text-align: end;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-100);
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .event-card h3 {
