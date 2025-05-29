@@ -22,9 +22,11 @@ const EventList = () => {
 
     return (
         <section id="events" className="event-list">
-            {
-                events.map(event => (<EventItem key={event.id} item={event} />))
-            }
+            {events.length > 0 ? (
+                events.map(event => <EventItem key={event.id} item={event} />)
+            ) : (
+                <p>No events available.</p>
+            )}
         </section>
     )
 }
