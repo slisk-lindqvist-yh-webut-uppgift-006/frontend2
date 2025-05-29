@@ -41,10 +41,18 @@ const EventDetailsPage = () => {
                         <h1>{event.title}</h1>
                         <div className='event-info-details'>
                             <div>
-                                <div className='event-info-date'>
+                                <div className="event-card-date">
                                     <i class="bi bi-calendar4-event"></i>
-                                    <p>{new Date(event.eventDate).toLocaleDateString()}</p>
-                                    <p>{new Date(event.eventDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} PM</p>
+                                    <p>{new Date(item.eventDate).toLocaleDateString()}</p>
+                                    <p>
+                                    {new Date(item.eventDate)
+                                        .toLocaleTimeString([], {
+                                        hour: '2-digit',
+                                        minute: '2-digit',
+                                        hour12: true
+                                        })
+                                        .replace(/am|pm/, match => match.toUpperCase())}
+                                    </p>
                                 </div>
                                 <div className='event-info-location'>
                                     <i class="bi bi-geo-alt"></i>
