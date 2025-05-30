@@ -25,7 +25,7 @@ const EventList = () => {
             {events.length > 0 ? (
                 events.map(event => <EventItem key={event.id} item={event} />)
             ) : (
-                <p>No events available.</p>
+                <p>No events available. Please wait...</p>
             )}
         </section>
     )
