@@ -9,7 +9,7 @@ const Dashboard = () => {
       <Nav />
       <Header />
       <main>
-        <h1>Dashboard</h1>
+        {/* <h1>Dashboard</h1> */}
         <p>Welcome to your dashboard!</p>
         {/* Add more dashboard components or content here */}
       </main>

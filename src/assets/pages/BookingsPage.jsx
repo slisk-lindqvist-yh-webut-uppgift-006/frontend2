@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../components/Nav'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import BookingsList from '../components/BookingsList'
 
 const Bookings = () => {
   return (
@@ -9,8 +10,8 @@ const Bookings = () => {
       <Nav />
       <Header />
       <main className='bookings-wrapper'>
-        <h1>Bookings</h1>
-        <p>Bookings page is under construction.</p>
+        {/* <h1>Bookings</h1> */}
+        <BookingsList />
       </main>
       <Footer />
     </div>
